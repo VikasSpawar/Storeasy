@@ -1,0 +1,68 @@
+# Root Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Client-specific
+client/node_modules/
+client/.next/
+client/out/
+client/.env.local
+client/.env.development.local
+client/.env.test.local
+client/.env.production.local
+client/build/
+client/dist/
+client/coverage/
+
+# Server-specific
+server/node_modules/
+server/.env
+server/.env.local
+server/.env.*.local
+server/build/
+server/dist/
+server/logs/
+server/coverage/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.vim
+*.iml
+*.sublime-workspace
+*.sublime-project
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Build artifacts
+dist/
+build/
+.next/
+out/
+
+# Testing
+coverage/
+.nyc_output/
+
+# Temporary files
+tmp/
+temp/
