@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  /* 1. Define Custom Colors */
+  --color-primary: #359EFF;
+  --color-background-light: #f5f7f8;
+  --color-background-dark: #0f1923;
+  --color-panel-dark: #1e1e24;
+  --color-border-dark: #2a2a30;
+
+  /* 2. Define Custom Fonts */
+  /* Ensure you import the font in layout.tsx or via @font-face */
+  --font-display: "Manrope", sans-serif;
+
+  /* 3. Dark Mode Strategy */
+  /* v4 uses native CSS 'dark:' variant automatically based on 'color-scheme' */
+}
+
+/* 4. Set Base Styles */
+/* This replaces the old @layer base */
+@layer base {
+  body {
+    @apply bg-background-light dark:bg-background-dark text-gray-900 dark:text-white font-display;
+  }
+  
+  /* Custom Scrollbar Styles */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #16161d;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2a2a30;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3f3f46;
+  }
+}
+
+/* 5. Utility Classes */
+@layer utilities {
+  .glass-panel {
+    background: rgba(30, 30, 36, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #2a2a30 #16161d;
+  }
+}
